@@ -16,7 +16,7 @@ We can use the code either to simulate imprinting process (folder IMP), in this 
 
 The parameters of the input file are already described in the FreeE_calc folder. Here I will only highlight the parameters relevant to the imprinting/rebinding simulation, other parameters should be the same in both cases.In the following "IMP" will designate imprinting simulations and "MIP" will designate analyte rebinding to mips simulation parameters set up.
 
-======================================================
+******************************************************
 ************ INPUT PARAMETERS DESCRIPTION ************
 -----------------------------------------------------------
 100	     	max # of colloids (per species, one number for all) - for IMP this number should be the total number of templates in the system. For MIP the number should be very large (~1000) , larger than would be ever reached, as it designates the maximum number of analytes in the system. 
@@ -31,12 +31,12 @@ The parameters of the input file are already described in the FreeE_calc folder.
 IMPRINTED ANCHOR POSITIONS vectors  - this entry is not needed if "imprint anchors" above is set to .false.
 
 ********** END INPUT PARAMETERS DESCRIPTION ***********
-======================================================
+*******************************************************
 
 
 
-======================================================
-**************** PROGRAM OUTPUT IMP *****************
+**********************************************************************************
+**************** PROGRAM OUTPUT IMP **********************************************
 The program output should look something like this for IMP simulation. First parameters are written to screen, than simulation starts and every number of icycles system status is written to screen: 
 icycle - MC cycle number, exe time: execution time in seconds for this cycle
 average number of colloids(analytes) in the system, average number of bound analytes
@@ -46,8 +46,7 @@ Binding affinity calculated from the number of bound analytes, system volume and
 In the case of imprinting (IMP) simulation binding affinity is meaningless. 
 
 Example here for an imprinting simulation:
-
-================ MC MIPS SIM ================
+ ================ MC MIPS SIM ================
  =============================================
  ================= INPUT PAR =================
  boxsize     12.6000000000000        12.6000000000000        12.6000000000000     
@@ -78,36 +77,40 @@ Example here for an imprinting simulation:
  =============================================
  ================= START SIM =================
 
-icycle  10000000, exe time (s)    15.5898
-average avncol:  19.999771400  avnbcol:  15.918987200
-tot ene old:  -386.639   tot ene:  -386.639
-moveacc:0.00644   excacc:0.00000   bondacc:0.00000
-Average number of bound analytes   15.9190
+icycle  10000000, exe time (s)    16.9211
+average avncol:  19.999807900  avnbcol:  16.687620400
+tot ene old:  -378.328   tot ene:  -378.328
+moveacc:0.00624   excacc:0.00000   bondacc:0.00000
+Average number of bound analytes   16.6876
 Binding Affinity    0.0000
 
-icycle  20000000, exe time (s)    15.4175
-average avncol:  20.000000000  avnbcol:  19.670586200
-tot ene old:  -382.290   tot ene:  -382.290
-moveacc:0.00273   excacc:0.00000   bondacc:0.00000
-Average number of bound analytes   19.6706
+icycle  20000000, exe time (s)    19.2727
+average avncol:  20.000000000  avnbcol:  17.997547200
+tot ene old:  -414.055   tot ene:  -414.055
+moveacc:0.00411   excacc:0.00000   bondacc:0.00000
+Average number of bound analytes   17.9975
 Binding Affinity    0.0000
 
-icycle  30000000, exe time (s)    15.4474
-average avncol:  20.000000000  avnbcol:  19.541982900
-tot ene old:  -432.919   tot ene:  -432.919
-moveacc:0.00306   excacc:0.00000   bondacc:0.00000
-Average number of bound analytes   19.5420
+icycle  30000000, exe time (s)    18.0231
+average avncol:  20.000000000  avnbcol:  18.513004200
+tot ene old:  -402.231   tot ene:  -402.231
+moveacc:0.00334   excacc:0.00000   bondacc:0.00000
+Average number of bound analytes   18.5130
 Binding Affinity    0.0000
 
+icycle  40000000, exe time (s)    17.2245
+average avncol:  20.000000000  avnbcol:  19.587022900
+tot ene old:  -428.831   tot ene:  -428.831
+moveacc:0.00246   excacc:0.00000   bondacc:0.00000
+Average number of bound analytes   19.5870
+Binding Affinity    0.0000
 
-************** END PROGRAM OUTPUT IMP ****************
-======================================================
+************** END PROGRAM OUTPUT IMP ********************************************
+**********************************************************************************
 
-
-
-======================================================
-**************** PROGRAM OUTPUT MIP ****************
-The program output should look something like this for MIP simulation..
+**********************************************************************************
+**************** PROGRAM OUTPUT MIP **********************************************
+The program output of a MIP simulation should look something like this:
 
 ================ MC MIPS SIM ================
  =============================================
@@ -117,7 +120,7 @@ The program output should look something like this for MIP simulation..
  max # of colloids          2000
  # of anchors(ligands)            40           0
  fraction of insert/delete, bond create/destroy moves    0.200000000000000       0.400000000000000     
- activity    1.013009359863071E-005
+ activity    2.260329406981054E-006
  tot n cycles             1000000000
  nout               100000000
  ---------------------------------------------
@@ -140,21 +143,19 @@ The program output should look something like this for MIP simulation..
  =============================================
  ================= START SIM =================
 
-icycle 100000000, exe time (s)   161.5007
-average avncol:   3.675517140  avnbcol:   3.655524680
-tot ene old:   -70.284   tot ene:   -70.284
-moveacc:0.05655   excacc:0.00238   bondacc:0.00001
-Average number of bound analytes    3.6555
-Binding Affinity  180.3951
+icycle 100000000, exe time (s)   175.7386
+average avncol:   4.800175610  avnbcol:   4.795734890
+tot ene old:  -137.802   tot ene:  -137.802
+moveacc:0.04333   excacc:0.00042   bondacc:0.00000
+Average number of bound analytes    4.7957
+Binding Affinity 1060.6493
 
-icycle 200000000, exe time (s)   162.6105
-average avncol:   4.190091550  avnbcol:   4.170100000
-tot ene old:   -64.513   tot ene:   -64.513
-moveacc:0.05055   excacc:0.00211   bondacc:0.00001
-Average number of bound analytes    4.1701
-Binding Affinity  205.7886
-
-
+icycle 200000000, exe time (s)   162.7572
+average avncol:   5.872672090  avnbcol:   5.868124540
+tot ene old:  -137.973   tot ene:  -137.973
+moveacc:0.03611   excacc:0.00035   bondacc:0.00000
+Average number of bound analytes    5.8681
+Binding Affinity 1297.8245
 
 
 

@@ -17,7 +17,7 @@ In the program we can assign "reactive" types called RX. These can be ligands or
 In the input-par.dat file provided we wish to calculate binding free energies of enantiomers. We have 8 RX types in total, we assign 4 to be ligands(anchors) and the next 4 to be receptors on the analyte. We therefore have 8x8 interaction matrix. An interaction of +100 is deemed no interaction. 
 
 In the following I will describe the parameters in the input file: 
-======================================================
+******************************************************
 ************ INPUT PARAMETERS DESCRIPTION ************
 -----------------------------------------------------------
 10.0,10.0,10.0  box size x,y,z  - system size should be large enough such that colloid cannot form bonds through periodic boundary, 10x10x10 is large enough unless very soft matrices are simulated (kspring<1) in which case it should be increased.
@@ -64,11 +64,11 @@ RX SPECIE ON COLLOID GEOMETRY (specie,vector3) normalised to particle radius - r
 IMPRINTED ANCHOR POSITIONS vectors  - the vector positions of imprinted ligand anchors in the system, 3 number for each vector. Vectors are written on the same line, and RX types corresponding to these vectors follow from lowest to highest depending on the specified number of anchors per RX type above 
 2.0 2.5 2.5  2.5 3.0 2.5  3.0 2.5 2.5  2.5 2.0 2.5  
 -----------------------------------------------------------
-======================================================
-********* END INPUT PARAMETERS DESCRIPTION ***********
-======================================================
 
-======================================================
+********* END INPUT PARAMETERS DESCRIPTION ***********
+******************************************************
+
+******************************************************
 ******************* PROGRAM OUTPUT *******************
 The program output on screen should look something like this:
 First simulation parameters are written to screen. Than simulation starts and every cycle steps the system status is written to screen, for example in the example below we calculated Free energy of binding to be about 7.9kT
