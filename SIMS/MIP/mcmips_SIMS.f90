@@ -227,7 +227,7 @@ do icycle=1,ncycles
            nout/(real(2*sum(avencol))/nout+1)/fracbm
     !  KA_analyte=(1.0d0/activity(1)+product(lbox(:)))*avnbcoldble/(1.0d0-avnbcoldble) 
      
-      write(*,'(A,F10.4)') 'Average number of bound ', avnbcoldble
+      write(*,'(A,F10.4)') 'Average number of bound analytes', avnbcoldble
       write(*,'(A,F10.4)') 'Binding Affinity', avnbcoldble/product(lbox(:))/activity
       if (avnbcoldble .lt. 1d-4 ) write(*,*) 'WARNING, system occupancy very low, f=',&
            avnbcoldble ,'consider increasing the chemical potential'
@@ -306,6 +306,11 @@ subroutine initial_conf(lbox,ncolspec,nrxspec,ncol,maxncol,nanc,maxnanc,rcol,nrx
         ncol=0
         do ii=1,nanc(1)
            read(202,*) atom, (posanc(kk,ii,1),kk=1,3)
+           if (any(posanc(:,ii,1) .gt. lbox(:))) then
+              write(*,*) 'WARNING: when reading anchor positions from file, &
+                   anchor positions are greater than box size... exiting'
+              call exit()
+           endif
         enddo
         
      else ! read everything       

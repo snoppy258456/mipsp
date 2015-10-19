@@ -1,5 +1,5 @@
 # mipsp
-Program for Monte Carlo simulations and Free Energy calculations of molecular imprinting as described in T. Curk, J. Dobnikar and D. Frenkel, Rational design of molecular imprinting, Soft Matter (2015), DOI: 10.1039/C5SM02144H
+Program for Monte Carlo simulations and Free Energy calculations of molecular imprinting as described in T. Curk, J. Dobnikar and D. Frenkel, Rational design of molecularly imprinted polymers, Soft Matter (2015), DOI: 10.1039/C5SM02144H
 
 The simulation code is written in Fortran 90 and can be used freely for Free energy calculations of analytes in imprinted cavities, or for simulating imprinting and rebinding process. The guide to using the program is found in respective folders. Any enquiry, questions or comments are welcome, please send me an email to tcurk5@gmail.com and I'll be happy to help.
 

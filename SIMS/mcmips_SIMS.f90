@@ -306,6 +306,11 @@ subroutine initial_conf(lbox,ncolspec,nrxspec,ncol,maxncol,nanc,maxnanc,rcol,nrx
         ncol=0
         do ii=1,nanc(1)
            read(202,*) atom, (posanc(kk,ii,1),kk=1,3)
+           if (any(posanc(:,ii,1) .gt. lbox(:))) then
+              write(*,*) 'WARNING: when reading anchor positions from file, &
+                   anchor positions are greater than box size... exiting'
+              call exit()
+           endif
         enddo
         
      else ! read everything       

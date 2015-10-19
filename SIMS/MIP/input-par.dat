@@ -7,7 +7,7 @@ INPUT FILE FOR MC MIPS CODE
 40 0		tot # of anchors  per rx specie
 2		# of rx sites per colloid 
 100 0.0		kspring,dspring ; spring stiffness, length
--11.5		mu, chemical potential for each colloid species	log(vol_fraction)	
+-13		mu, chemical potential for each colloid species	log(vol_fraction)	
 1000000000		tot # of MC cycles
 100000000	output configration timer
 ------------------------------------------------------------

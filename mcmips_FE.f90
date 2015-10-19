@@ -228,8 +228,8 @@ do icycle=1,ncycles
            (real(2*sum(avencol))/nout+1)/fracgcmc ,  '   bondacc:',real(bondacc)/&
            nout/(real(2*sum(avencol))/nout+1)/fracbm
       KA_analyte=(1.0d0/activity(1)+product(lbox(:)))*avnbcoldble/(1.0d0-avnbcoldble) 
-      write(*,'(A,F10.4)') 'Analyte binding associaton constant K_A = ', KA_analyte
-      write(*,'(A,F10.4)') 'Analyte binding Free Energy F_cav = ',-log(KA_analyte) 
+      write(*,'(A,F12.2)') 'Analyte binding associaton constant K_A = ', KA_analyte
+      write(*,'(A,F10.6)') 'Analyte binding Free Energy F_cav = ',-log(KA_analyte) 
       if (avnbcoldble .lt. 1d-5 ) write(*,*) 'WARNING, cavity occupancy very low, f=',&
            avnbcoldble ,'consider increasing the chemical potential'
      if (avnbcoldble .gt. 0.99 ) write(*,*) 'WARNING, cavity occupancy very high, f=',&
