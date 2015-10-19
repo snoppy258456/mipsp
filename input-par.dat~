@@ -20,7 +20,7 @@ INPUT FILE FOR MC MIPS CODE
 -----------------------------------------------------------
 .true.		random seed
 .false.		mobile anchors
-.true. 		imprint_anchors, otherwise random positions in the box
+.true. 	imprint_anchors, otherwise random positions in the box
 .false.	.false.	read initial configuration, read only anchor positions
 'imp_mu2050_ncol1020_out1012.xyz'	initial configuration file name
 'test'	output file name

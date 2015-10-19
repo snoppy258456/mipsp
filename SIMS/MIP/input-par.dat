@@ -1,0 +1,37 @@
+INPUT FILE FOR MC MIPS CODE
+-----------------------------------------------------------
+12.6,12.6,12.6        box size x,y,z (initialbox size if npt) 
+1 2	        # of colloid species, # of rx species
+0	     	init # od colloids (for each specie)
+2000	     	max # of colloids (per species, one number for all)	  
+40 0		tot # of anchors  per rx specie
+2		# of rx sites per colloid 
+100 0.0		kspring,dspring ; spring stiffness, length
+-11.5		mu, chemical potential for each colloid species	log(vol_fraction)	
+1000000000		tot # of MC cycles
+100000000	output configration timer
+------------------------------------------------------------
+0.5		colloid radius (one for all species)
+0.1		max hop col
+0.2		max_rot_col (actually sin(.))
+0.2 0.4		fraction of insert/delete, create/destroy bond moves ; else hop moves	
+1		bond create/destroy cutoff
+8		mnpic+1 -- max # of colloids in each cell + 1			
+-----------------------------------------------------------
+.true.		random seed
+.false.		mobile anchors
+.false. 		imprint_anchors, otherwise random positions in the box
+.true.	.true.	read initial configuration, read only anchor positions
+'imprinted_ncol1020_nanc1040.xyz'	initial configuration file name
+'mip'	output file name
+-----------------------------------------------------------
+RX BOND ENE INTERACTION MATRIX		
+100 -6.90000
+-6.90000 100 
+-----------------------------------------------------------
+RX SPECIE ON COLLOID GEOMETRY (specie,vector3) normalised to particle radius
+2  -1.0  0.0   0.0      
+2  1.0   0.0   0.0   
+-----------------------------------------------------------
+IMPRINTED ANCHOR POSITIONS vectors  
+2.0 2.5 2.5    2.5 3.0 2.5    3.0 2.5 2.5    2.5 2.0 2.5  
